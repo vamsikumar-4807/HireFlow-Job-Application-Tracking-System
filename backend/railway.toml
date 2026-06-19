@@ -1,0 +1,10 @@
+# Railway configuration for Spring Boot backend
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "java -jar target/job-application-tracker-1.0.0.jar"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
